@@ -29,7 +29,7 @@ public class Cart {
                 }
             }
             else{
-                System.out.println("Quantity: " + quantity + " " + "Item: " + itemnamecart.get(i) + " " + "Price: " + quantity* itempricecart.get(i));
+                System.out.println("Quantity: " + quantity + " " + "Item: " + itemnamecart.get(i) + " " + "Price: " + quantity* itempricecart.get(i) +" USD");
                 quantity  = 1;
             }
         }
@@ -37,7 +37,7 @@ public class Cart {
         for (int i = 0; i<itempricecart.size(); i++){
             totalprice = totalprice + itempricecart.get(i);
         }
-        System.out.println("Total Item: " + itemnamecart.size() + " " +"Total Price: " + totalprice);
+        System.out.println("Total Item: " + itemnamecart.size() + " " +"Total Price: " + totalprice + " USD");
     }
     public void editOrder() {
         System.out.println("0) Exit");

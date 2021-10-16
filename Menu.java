@@ -7,6 +7,7 @@ public class Menu {
     String[] arr = new String[]{"ShortRound", "Globe", "Tube", "Cone", "Place your Order", "Edit Cart"};
 
     public void displayMenu() {
+        System.out.println("Choose Light Shape ");
         for (int i = 0; i < arr.length; i++) {
             System.out.println((i + 1) + ") " + arr[i]);
         }
@@ -16,6 +17,7 @@ public class Menu {
     Scanner s1 = new Scanner(System.in);
     Cart cart = new Cart();
     public Boolean orderSelection(String inp) {
+        System.out.println("Choose Light Type ");
         if (inp.equals("1")) {
             ShortRound shortRound = new ShortRound();
             list = shortRound.shortroundlist;
@@ -24,14 +26,16 @@ public class Menu {
                 System.out.println(count + ") " + item.lightType());
                 count++;
             }
-            System.out.print("Choose Light Type: ");
+            System.out.print("Enter your Option: ");
             int option = s1.nextInt();
             System.out.print("Enter Quantity: ");
             int quantity = s1.nextInt();
             if (quantity <= 0) {
                 quantity = 1;
             }
-            cart.addItem(list.get(option-1).lightType(), list.get(option-1).lightPrice(), quantity);
+            cart.addItem(list.get(option-1).lightType(),
+                    list.get(option-1).lightPrice(),
+                    quantity);
             System.out.println("Item Added to Cart");
             System.out.println("-----------------------------" + "\n");
             return false;
@@ -43,7 +47,7 @@ public class Menu {
                 System.out.println(count + ") " + item.lightType());
                 count++;
             }
-            System.out.print("Choose Light Type: ");
+            System.out.print("Enter your Option: ");
             int option = s1.nextInt();
             System.out.print("Enter Quantity: ");
             int quantity = s1.nextInt();
@@ -62,7 +66,7 @@ public class Menu {
                 System.out.println(count + ") " + item.lightType());
                 count++;
             }
-            System.out.print("Choose Light Type:");
+            System.out.print("Enter your Option:");
             int option = s1.nextInt();
             System.out.print("Enter Quantity: ");
             int quantity = s1.nextInt();
@@ -81,7 +85,7 @@ public class Menu {
                 System.out.println(count + ") " + item.lightType());
                 count++;
             }
-            System.out.print("Choose Light Type: ");
+            System.out.print("Enter your Option: ");
             int option = s1.nextInt();
             System.out.print("Enter Quantity: ");
             int quantity = s1.nextInt();

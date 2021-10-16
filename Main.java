@@ -9,13 +9,13 @@ Main {
         while (true) {
             menu.displayMenu();
             Scanner scanner = new Scanner(System.in);
-            System.out.print("Choose Light Shape: ");
+            System.out.print("Enter your Option: ");
             String input = scanner.nextLine();
             Boolean flag = menu.orderSelection(input);
             if(flag == true) {
                 break;
             }
-            // write your code here
+
         }
     }
 
